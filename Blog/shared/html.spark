@@ -1,0 +1,10 @@
+﻿<html>
+    <head>
+        <title></title>
+    </head>
+    <use:styles/>
+    <body>
+        <use:view/>
+        <use:scrpits/>
+    </body>
+</html>

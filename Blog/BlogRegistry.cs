@@ -8,7 +8,9 @@ namespace Blog
     {
         public BlogRegistry()
         {
+            #if DEBUG
             IncludeDiagnostics(true);
+            #endif
 
             Applies.ToAllPackageAssemblies();
             Actions.IncludeClassesSuffixedWithController();

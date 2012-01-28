@@ -1,5 +1,4 @@
-﻿
-namespace Blog.Home
+﻿namespace Blog.Home
 {
     public class HomeController
     {

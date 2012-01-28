@@ -80,11 +80,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <None Include="Home\Index.spark" />
-    <Compile Include="Home\HomeController.cs" />
-    <Compile Include="Home\HomeViewModel.cs" />
+    <None Include="home\index.spark" />
+    <Compile Include="home\HomeController.cs" />
+    <Compile Include="home\HomeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="Shared\Application.spark" />
+    <None Include="shared\application.spark" />
+    <None Include="shared\html.spark" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
