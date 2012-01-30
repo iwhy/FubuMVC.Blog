@@ -1,6 +1,6 @@
 namespace Blog.Home
 {
-    public class HomeViewModel
-    {
-    }
+  public class HomeViewModel
+  {
+  }
 }

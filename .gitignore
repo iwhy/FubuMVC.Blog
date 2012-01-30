@@ -7,3 +7,6 @@ _ReSharper.*
  *.DotSettings
 *sass-cache/
 *.css
+*.csproj
+*.csproj.user
+*.user

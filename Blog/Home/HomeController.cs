@@ -1,10 +1,10 @@
 ﻿namespace Blog.Home
 {
-    public class HomeController
+  public class HomeController
+  {
+    public HomeViewModel Index()
     {
-        public HomeViewModel Index()
-        {
-            return new HomeViewModel();
-        }
+      return new HomeViewModel();
     }
+  }
 }

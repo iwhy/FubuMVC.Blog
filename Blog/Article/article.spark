@@ -1,0 +1,23 @@
+﻿<ignore>
+  <script id="article" type="text/x-jquery-tmpl">
+    <article>
+      <header>
+        <h2>
+          <a href="#">
+            ${title}
+          </a>
+        </h2>
+        <time datetime="${publishedDate}">
+          Posted On: ${publishedDateString} by
+        </time> <a href="" rel="author">${author}</a>
+      </header>
+      <section>
+        {{html body}}
+      </section>
+      <p>
+        <a href="">Continue Reading</a>
+        <a href="">Comments</a>
+      </p>
+    </article>
+  </script>
+</ignore>

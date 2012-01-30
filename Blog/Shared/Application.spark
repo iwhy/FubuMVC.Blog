@@ -1,3 +1,7 @@
 ﻿<use master="Html"/>
-
-<use:view/>
+<div>
+  <section>
+    <use:view/>
+  </section>
+  <Navigation/>
+</div>
