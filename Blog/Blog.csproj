@@ -96,7 +96,9 @@
     </Compile>
     <None Include="Article\articlepreview.spark" />
     <None Include="Article\article.spark" />
-    <None Include="Article\articlefull.spark" />
+    <None Include="Article\articlefull.spark">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Home\index.spark" />
     <Compile Include="Home\HomeController.cs" />
     <Compile Include="Home\HomeViewModel.cs" />
