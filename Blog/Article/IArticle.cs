@@ -8,6 +8,7 @@ namespace Blog.Article
     string Author { get; set; }
     DateTime PublishedDate { get; set; }
     string Title { get; set; }
+    string Uri { get; set; }
     string Body { get; set; }
   }
 }

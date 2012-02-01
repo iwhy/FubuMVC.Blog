@@ -1,5 +1,5 @@
 ﻿<viewdata model="Blog.Home.HomeViewModel" />
-<include href="../Article/article.spark" parse="spark"/>
+<include href="../Article/articlepreview.spark" parse="spark"/>
 <content:scripts>
     <script type="text/javascript" src="/content/home/articles.js"></script>
 </content:scripts>
