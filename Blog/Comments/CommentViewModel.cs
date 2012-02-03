@@ -7,6 +7,11 @@ namespace Blog.Comments
     public string Author { get; set; }
     public DateTime PublishedDate { get; set; }
     public string Body { get; set; }
-  }
 
+    public string PublishedDateString
+    {
+      get { return PublishedDate.ToString("MMMM dd, yyyy"); }
+    }
+
+  }
 }

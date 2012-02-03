@@ -1,15 +1,13 @@
 ﻿define(['util/jquery', 'util/js-loader'], function ($, jL) {
-  var loader = {},
-      attr = 'data-module';
+  var loader = {}, attr = 'data-module', module;
 
   loader.load = function (){
     $('['+attr+']').each(function() {
-      var module = $(this);
+      module = $(this);
       $.ajax({
         url: module.attr(attr),
         success: function(moduleHtml) {
-          module.html(moduleHtml);
-          jL.load(moduleHtml);
+          module.html(jL.load(moduleHtml));
         }
       });
     });

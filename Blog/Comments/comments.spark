@@ -4,6 +4,6 @@
 <a id="load-comments" href="#">Comments</a>
 
 <include href="commentsfull.spark" parse="spark"/>
-<ul data="${Model.Uri}"></ul>
+<ul class="comments" data="${Model.Uri}"></ul>
 
 <script type="text/javascript" src="/content/comments/get-comments.js"></script>

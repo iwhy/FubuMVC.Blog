@@ -1,9 +1,13 @@
 ﻿require(['util/underscore', 'util/jquery'], function (_, $) {
-  var renderComments = function (comments) {
-    _.each(comments, function (comment) {
-      //render comment here.
-    });
-  };
+  var $commenttemplate = $('#comment-full'),
+    $comments = $('.comments'),
+    renderComments = function (comments) {
+        console.log('load');
+      _.each(comments, function (comment) {
+        $commenttemplate.tmpl(comment).appendTo($comments);
+      });
+    };
+
   $('#load-comments').click(function() {
     $.ajax({
       url: 'comments/get',
