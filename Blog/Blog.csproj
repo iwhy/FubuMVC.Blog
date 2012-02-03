@@ -121,6 +121,7 @@
     <Content Include="Content\master.js" />
     <Content Include="Content\home\get-articles.js" />
     <Content Include="Content\util\amplify-1.1.0.js" />
+    <Content Include="Content\util\js-loader.js" />
     <Content Include="Content\util\module-loader.js" />
     <Content Include="Content\util\amplify.js" />
     <Content Include="Content\util\order-1.0.5.js" />

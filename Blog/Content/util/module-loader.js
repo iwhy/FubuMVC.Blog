@@ -1,4 +1,4 @@
-﻿define(['util/jquery'], function ($) {
+﻿define(['util/jquery', 'util/js-loader'], function ($, jL) {
   var loader = {},
       attr = 'data-module';
 
@@ -9,6 +9,7 @@
         url: module.attr(attr),
         success: function(moduleHtml) {
           module.html(moduleHtml);
+          jL.load(moduleHtml);
         }
       });
     });
