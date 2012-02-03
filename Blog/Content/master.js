@@ -1,2 +1,6 @@
-﻿require([], function () {
+﻿require(['util/jquery'], function ($) {
+  $.ajaxSetup({
+    dataType: 'json',
+  });
+
 });

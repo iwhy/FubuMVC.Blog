@@ -1,7 +1,8 @@
 ﻿<viewdata model="Blog.Article.ArticlePageViewModel"/>
 <include href="articlefull.spark" parse="spark"/>
-<article data="${Model.Uri}">
-</article>
+
+<article data="${Model.Uri}"></article>
+
 <content:scripts>
     <script type="text/javascript" src="/content/article/get.js"></script>
 </content:scripts>

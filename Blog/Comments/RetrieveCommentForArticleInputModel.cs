@@ -4,6 +4,6 @@ namespace Blog.Comments
 {
   public class RetrieveCommentForArticleInputModel
   {
-    public Guid Identifier { get; set; }
+    public Guid ArticleIdentifier { get; set; }
   }
 }

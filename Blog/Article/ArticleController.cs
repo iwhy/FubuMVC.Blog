@@ -13,7 +13,7 @@ namespace Blog.Article
       return new ArticlePageViewModel{ Uri = inputModel.Uri };
     }
 
-    public dynamic Get()
+    public dynamic GetQuery()
     {
       return new ArticleViewModel
         {

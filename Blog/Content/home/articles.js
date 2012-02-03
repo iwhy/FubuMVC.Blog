@@ -1,4 +1,4 @@
-﻿define(['util/underscore', 'util/jquery', 'util/showdown'], function (_, $, sd) {
+﻿require(['util/underscore', 'util/jquery', 'util/showdown'], function (_, $, sd) {
   var converter = sd.converter(),
       $articletemplate = $('#article-preview'),
       $container = $('div > section'),
@@ -11,7 +11,6 @@
 
   $.ajax({
     url: 'article/getall',
-    dataType: 'json',
     success: renderArticles
   });
 });

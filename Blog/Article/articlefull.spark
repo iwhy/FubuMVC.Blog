@@ -2,9 +2,7 @@
   <script id="article-full" type="text/x-jquery-tmpl">
     <header>
       <h2>
-        <a href="${uri}">
-          ${title}
-        </a>
+        ${title}
       </h2>
       <time datetime="${publishedDate}">
         Posted On: ${publishedDateString} by
