@@ -1,6 +1,5 @@
 ﻿require(['util/underscore', 'util/jquery', 'util/showdown'], function (_, $, sd) {
-  var converter = sd.converter(),
-      $articletemplate = $('#article-preview'),
+  var $articletemplate = $('#article-preview'),
       $container = $('div > section'),
       renderArticles = function (articles) {
         _.each(articles, function (article) {
@@ -11,6 +10,7 @@
 
   $.ajax({
     url: 'article/getall',
+    dataType: 'json',
     success: renderArticles
   });
 });

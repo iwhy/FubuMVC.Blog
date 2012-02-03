@@ -1,6 +1,5 @@
 ﻿require(['util/underscore', 'util/jquery', 'util/showdown', 'util/amplify'], function (_, $, sd, amplify) {
-  var converter = sd.converter(),
-      $article = $('article'),
+  var $article = $('article'),
       $articletemplate = $('#article-full'),
       renderArticle = function (article) {
         article.body = sd.makeHtml(article.body);
@@ -14,6 +13,7 @@
 
   $.ajax({
     url: 'article/get',
+    dataType: 'json',
     success: renderArticle
   });
 });
