@@ -11,16 +11,16 @@ namespace Blog.Article
     public DateTime PublishedDate { get; set; }
     public string Title { get; set; }
     public string Uri { get; set; }
-    private string _body;
+    private string _preview;
 
-    public string Body
+    public string Preview
     {
-      get { return _body; }
+      get { return _preview; }
       set
       {
         var text = value.Split(new []{more}, StringSplitOptions.None);
         
-        _body = text.First();
+        _preview = text.First();
       }
     }
 

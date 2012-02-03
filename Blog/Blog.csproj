@@ -79,6 +79,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About\AboutController.cs" />
+    <Compile Include="About\AboutPageViewModel.cs" />
+    <Compile Include="About\AuthorPageViewModel.cs" />
     <Compile Include="Article\ArticleController.cs" />
     <Compile Include="Article\ArticleInputModel.cs" />
     <Compile Include="Article\ArticlePageViewModel.cs" />
@@ -95,6 +98,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <None Include="About\contact.spark" />
+    <None Include="About\author.spark" />
     <None Include="Article\articlepreview.spark" />
     <None Include="Article\article.spark" />
     <None Include="Article\articlefull.spark">

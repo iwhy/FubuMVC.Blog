@@ -3,7 +3,7 @@
       $container = $('div > section'),
       renderArticles = function (articles) {
         _.each(articles, function (article) {
-          article.body = sd.makeHtml(article.body);
+          article.preview = sd.makeHtml(article.preview);
           $articletemplate.tmpl(article).appendTo($container);
         });
       };

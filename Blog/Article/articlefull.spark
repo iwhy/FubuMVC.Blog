@@ -6,7 +6,7 @@
       </h2>
       <time datetime="${publishedDate}">
         Posted On: ${publishedDateString} by
-      </time> <a href="" rel="author">${author}</a>
+      </time> <a href="/author" rel="author">${author}</a>
     </header>
     <section>
       {{html body}}

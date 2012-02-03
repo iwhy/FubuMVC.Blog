@@ -1,15 +1,16 @@
 ﻿require(['util/underscore', 'util/jquery'], function (_, $) {
   var $commenttemplate = $('#comment-full'),
-    $comments = $('.comments'),
-    renderComments = function (comments) {
-        console.log('load');
-      $comments.html('');
-      _.each(comments, function (comment) {
-        $commenttemplate.tmpl(comment).appendTo($comments);
-      });
-    };
+      $commentsLink = $('#load-comments'),
+      $comments = $('.comments'),
+      hash = location.hash,
+      renderComments = function (comments) {
+        $comments.html('');
+        _.each(comments, function (comment) {
+          $commenttemplate.tmpl(comment).appendTo($comments);
+        });
+      };
 
-  $('#load-comments').click(function() {
+  $commentsLink.click(function() {
     $.ajax({
       url: 'comments/get',
       dataType: 'json',
@@ -17,4 +18,9 @@
     });
     return false;
   });
+
+  if(hash && hash === '#comments') {
+   $commentsLink.click();
+  }
+
 });

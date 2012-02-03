@@ -10,7 +10,7 @@ namespace Blog.Comments
 
     public string PublishedDateString
     {
-      get { return PublishedDate.ToString("MMMM dd, yyyy"); }
+      get { return PublishedDate.ToString("MMMM dd, yyyy (hh:mm)"); }
     }
 
   }
