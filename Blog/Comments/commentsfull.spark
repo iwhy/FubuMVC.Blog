@@ -1,5 +1,5 @@
 ﻿<ignore>
   <script id="comments-full" type="text/x-jquery-tmpl">
-    test
+    <li></li>
   </script>
 </ignore>

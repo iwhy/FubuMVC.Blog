@@ -84,9 +84,9 @@
     <Compile Include="Article\ArticlePageViewModel.cs" />
     <Compile Include="Article\ArticleViewModel.cs" />
     <Compile Include="Article\ArticlePreviewViewModel.cs" />
-    <Compile Include="Article\IArticle.cs" />
     <Compile Include="BlogRegistry.cs" />
     <Compile Include="Comments\CommentsController.cs" />
+    <Compile Include="Comments\CommentsPageInputModel.cs" />
     <Compile Include="Comments\CommentsPageViewModel.cs" />
     <Compile Include="Comments\CommentViewModel.cs" />
     <Compile Include="Comments\IComment.cs" />

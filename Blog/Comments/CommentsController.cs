@@ -5,10 +5,10 @@ namespace Blog.Comments
 {
   public class CommentsController
   {
-    [UrlPattern("article-comments")]
-    public CommentsPageViewModel Index()
+    [UrlPattern("comments/{Uri}")]
+    public CommentsPageViewModel Index(CommentsPageInputModel inputModel)
     {
-      return new CommentsPageViewModel();
+      return new CommentsPageViewModel{Uri = inputModel.Uri};
     }
 
     public dynamic GetQuery(RetrieveCommentForArticleInputModel inputModel)

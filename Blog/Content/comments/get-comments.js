@@ -1,11 +1,14 @@
-﻿require(['util/underscore', 'util/jquery', 'util/showdown', 'util/amplify'], function (_, $, sd, amplify) {
-  var renderComments = function () {
+﻿require(['util/underscore', 'util/jquery'], function (_, $) {
+  var renderComments = function (comments) {
+    _.each(comments, function (comment) {
+      //render comment here.
+    });
   };
   $('#load-comments').click(function() {
-   $.ajax({
-     url: 'comments/get',
-     data: data,
-     success: renderComments
-   });
+    $.ajax({
+      url: 'comments/get',
+      dataType: 'json',
+      success: renderComments
+    });
   });
 });

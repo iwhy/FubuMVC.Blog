@@ -29,7 +29,7 @@ namespace Blog.Article
 
     public dynamic GetAllQuery()
     {
-      return new List<IArticle>
+      return new List<ArticlePreviewViewModel>
       {
          new ArticlePreviewViewModel
            {

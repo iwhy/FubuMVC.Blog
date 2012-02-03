@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Blog.Article
 {
-  public class ArticlePreviewViewModel : IArticle
+  public class ArticlePreviewViewModel
   {
     private const string more = "<!--more-->";
 
@@ -23,8 +23,6 @@ namespace Blog.Article
         _body = text.First();
       }
     }
-
-    public Guid Identifier { get; set; }
 
     public string PublishedDateString
     {
