@@ -3,6 +3,7 @@
     $comments = $('.comments'),
     renderComments = function (comments) {
         console.log('load');
+      $comments.html('');
       _.each(comments, function (comment) {
         $commenttemplate.tmpl(comment).appendTo($comments);
       });
@@ -14,5 +15,6 @@
       dataType: 'json',
       success: renderComments
     });
+    return false;
   });
 });
