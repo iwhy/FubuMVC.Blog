@@ -116,11 +116,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\master.less" />
-    <Content Include="Content\article\get.js" />
-    <Content Include="Content\comments\get.js" />
+    <Content Include="Content\article\get-article.js" />
+    <Content Include="Content\comments\get-comments.js" />
     <Content Include="Content\master.js" />
-    <Content Include="Content\home\articles.js" />
+    <Content Include="Content\home\get-articles.js" />
     <Content Include="Content\util\amplify-1.1.0.js" />
+    <Content Include="Content\util\module-loader.js" />
     <Content Include="Content\util\amplify.js" />
     <Content Include="Content\util\order-1.0.5.js" />
     <Content Include="Content\util\jquery.tmpl-1.0.0.js" />

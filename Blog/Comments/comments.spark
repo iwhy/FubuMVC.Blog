@@ -2,7 +2,5 @@
 <viewdata model="Blog.Comments.CommentsPageViewModel"/>
 <include href="commentsfull.spark" parse="spark"/>
 
-<a name="comments" href="#">Comments</a>
-<content:scripts>
-    <script type="text/javascript" src="/content/comments/get.js"></script>
-</content:scripts>
+<a id="load-comments" href="#">Comments</a>
+<script type="text/javascript" src="/content/comments/get-comments.js"></script>

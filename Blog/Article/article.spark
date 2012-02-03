@@ -2,7 +2,8 @@
 <include href="articlefull.spark" parse="spark"/>
 
 <article data="${Model.Uri}"></article>
+<section data-module="/article-comments"></section>
 
 <content:scripts>
-    <script type="text/javascript" src="/content/article/get.js"></script>
+    <script type="text/javascript" src="/content/article/get-article.js"></script>
 </content:scripts>
