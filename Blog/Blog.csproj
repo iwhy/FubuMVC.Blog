@@ -80,22 +80,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlogRegistry.cs" />
-    <Compile Include="Comments\CommentsController.cs" />
-    <Compile Include="Comments\CommentsPageInputModel.cs" />
-    <Compile Include="Comments\CommentsPageViewModel.cs" />
-    <Compile Include="Comments\CommentViewModel.cs" />
-    <Compile Include="Comments\IComment.cs" />
-    <Compile Include="Comments\RetrieveCommentForArticleInputModel.cs" />
     <Compile Include="NewtonSoftJsonWriter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <None Include=".links" />
     <None Include=".package-manifest" />
-    <None Include="Comments\commentsfull.spark">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Comments\comments.spark" />
     <None Include="Handlers\Home\index.spark" />
     <Compile Include="Handlers\Home\GetHandler.cs" />
     <Compile Include="Handlers\Home\HomeViewModel.cs" />
@@ -108,7 +98,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\master.less" />
-    <Content Include="Content\comments\get-comments.js" />
     <Content Include="Content\master.js" />
     <Content Include="Content\util\amplify-1.1.0.js" />
     <Content Include="Content\util\js-loader.js" />

@@ -6,7 +6,7 @@
       </h2>
       <time datetime="${Model.PublishedDate}">
         Posted On: ${Model.PublishedDateString} by
-      </time> <a href="/author" rel="author">${Model.Author}</a>
+      </time> <a href="/about/author" rel="author">${Model.Author}</a>
     </header>
     <section>
       !{Model.Body}
@@ -14,3 +14,5 @@
     <p>
     </p>
 </article>
+<section data-module="/comments/${Model.Uri}">
+</section>

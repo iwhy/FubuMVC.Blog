@@ -1,8 +1,0 @@
-﻿<ignore>
-  <script id="comment-full" type="text/x-jquery-tmpl">
-    <li>
-      <h3><time datetime="${publishedDate}">${publishedDateString} BY</time> ${author}</h3>
-      ${body}
-    </li>
-  </script>
-</ignore>

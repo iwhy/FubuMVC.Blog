@@ -2,5 +2,6 @@
 <links xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <include>..\Bottles\Blog.About</include>
   <include>..\Bottles\Blog.Article</include>
+  <include>..\Bottles\Blog.Comments</include>
   <EnvironmentAssembly>Blog</EnvironmentAssembly>
 </links>

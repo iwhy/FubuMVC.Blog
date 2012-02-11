@@ -2,7 +2,7 @@
 
 namespace Blog.Comments
 {
-  public class CommentViewModel : IComment
+  public class CommentViewModel
   {
     public string Author { get; set; }
     public DateTime PublishedDate { get; set; }

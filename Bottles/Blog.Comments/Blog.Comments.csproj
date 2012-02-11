@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FAD69C8A-3023-425E-9F2A-C1A72C396BA6}</ProjectGuid>
+    <ProjectGuid>{492CB989-6705-4EE5-B633-432A991E64BE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Blog.Article</RootNamespace>
-    <AssemblyName>Blog.Article</AssemblyName>
+    <RootNamespace>Blog.Comments</RootNamespace>
+    <AssemblyName>Blog.Comments</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -70,22 +70,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArticleRegistry.cs" />
-    <Compile Include="Handlers\ArticleInputModel.cs" />
-    <Compile Include="Handlers\ArticleViewModel.cs" />
+    <Compile Include="CommentsRegistry.cs" />
+    <Compile Include="Handlers\CommentsInputModel.cs" />
+    <Compile Include="Handlers\CommentsViewModel.cs" />
+    <Compile Include="Handlers\CommentViewModel.cs" />
     <Compile Include="Handlers\GetHandler.cs" />
-    <Compile Include="Handlers\Summaries\ArticleSummariesViewModel.cs" />
-    <Compile Include="Handlers\Summaries\ArticleSummaryViewModel.cs" />
-    <Compile Include="Handlers\Summaries\GetHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Shared\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include=".package-manifest" />
-    <None Include="Handlers\article.spark" />
-    <None Include="Handlers\Summaries\articlesummary.spark" />
+    <None Include="Handlers\comments.spark" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -77,9 +77,7 @@
     <Compile Include="Handlers\Author\GetHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="content\scripts\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include=".package-manifest" />
     <None Include="Handlers\about.spark" />
