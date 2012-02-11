@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-namespace Blog.Article
+namespace Blog.Article.Summaries
 {
-  public class ArticlePreviewViewModel
+  public class ArticleSummaryViewModel
   {
     private const string more = "<!--more-->";
 
@@ -11,16 +11,16 @@ namespace Blog.Article
     public DateTime PublishedDate { get; set; }
     public string Title { get; set; }
     public string Uri { get; set; }
-    private string _preview;
+    private string _summary;
 
-    public string Preview
+    public string Summary
     {
-      get { return _preview; }
+      get { return _summary; }
       set
       {
         var text = value.Split(new []{more}, StringSplitOptions.None);
         
-        _preview = text.First();
+        _summary = text.First();
       }
     }
 

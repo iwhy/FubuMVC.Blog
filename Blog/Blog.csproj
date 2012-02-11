@@ -79,14 +79,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About\AboutController.cs" />
-    <Compile Include="About\AboutPageViewModel.cs" />
-    <Compile Include="About\AuthorPageViewModel.cs" />
-    <Compile Include="Article\ArticleController.cs" />
-    <Compile Include="Article\ArticleInputModel.cs" />
-    <Compile Include="Article\ArticlePageViewModel.cs" />
-    <Compile Include="Article\ArticleViewModel.cs" />
-    <Compile Include="Article\ArticlePreviewViewModel.cs" />
     <Compile Include="BlogRegistry.cs" />
     <Compile Include="Comments\CommentsController.cs" />
     <Compile Include="Comments\CommentsPageInputModel.cs" />
@@ -98,20 +90,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <None Include="About\contact.spark" />
-    <None Include="About\author.spark" />
-    <None Include="Article\articlepreview.spark" />
-    <None Include="Article\article.spark" />
-    <None Include="Article\articlefull.spark">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include=".links" />
+    <None Include=".package-manifest" />
     <None Include="Comments\commentsfull.spark">
       <SubType>Designer</SubType>
     </None>
     <None Include="Comments\comments.spark" />
-    <None Include="Home\index.spark" />
-    <Compile Include="Home\HomeController.cs" />
-    <Compile Include="Home\HomeViewModel.cs" />
+    <None Include="Handlers\Home\index.spark" />
+    <Compile Include="Handlers\Home\GetHandler.cs" />
+    <Compile Include="Handlers\Home\HomeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Shared\Application.spark">
       <SubType>Designer</SubType>
@@ -121,10 +108,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\master.less" />
-    <Content Include="Content\article\get-article.js" />
     <Content Include="Content\comments\get-comments.js" />
     <Content Include="Content\master.js" />
-    <Content Include="Content\home\get-articles.js" />
     <Content Include="Content\util\amplify-1.1.0.js" />
     <Content Include="Content\util\js-loader.js" />
     <Content Include="Content\util\module-loader.js" />
@@ -142,9 +127,7 @@
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

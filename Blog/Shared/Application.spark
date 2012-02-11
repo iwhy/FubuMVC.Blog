@@ -1,7 +1,5 @@
 ﻿<use master="Html"/>
 <div>
-  <section>
     <use:view/>
-  </section>
   <Navigation/>
 </div>

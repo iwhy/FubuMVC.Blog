@@ -1,5 +1,7 @@
 bin/
 obj/
+*.user
+*.ReSharper
 _ReSharper.*
 *.suo
 *.swp
@@ -7,6 +9,4 @@ _ReSharper.*
  *.DotSettings
 *sass-cache/
 *.css
-*.csproj
-*.csproj.user
-*.user
+*.csproj.*

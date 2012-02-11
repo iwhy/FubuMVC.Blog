@@ -17,18 +17,9 @@ namespace Blog
 #endif
 
       Applies.ToAllPackageAssemblies();
-      Actions.IncludeClassesSuffixedWithController();
+      Routes.HomeIs<GetHandler>(x => x.Execute());
 
       ApplyHandlerConventions();
-
-      Routes
-          .HomeIs<HomeController>(x => x.Index())
-          .IgnoreControllerNamespaceEntirely()
-          .IgnoreMethodSuffix("Index")
-          .IgnoreMethodSuffix("Command")
-          .IgnoreMethodSuffix("Query")
-          .ConstrainToHttpMethod(action => action.Method.Name.EndsWith("Command"), "POST")
-          .ConstrainToHttpMethod(action => action.Method.Name.StartsWith("Query"), "GET");
 
       this.UseSpark();
 

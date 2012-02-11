@@ -1,0 +1,4 @@
+﻿<viewdata model="About.AboutViewModel"/>
+<header>
+    <h2>About</h2>
+</header>

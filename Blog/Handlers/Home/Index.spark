@@ -1,0 +1,6 @@
+﻿<viewdata model="Blog.Home.HomeViewModel" />
+<section data-module="/article/summaries">
+</section>
+<content:scripts>
+    <script type="text/javascript" src="/content/scripts/get-articles.js"></script>
+</content:scripts>

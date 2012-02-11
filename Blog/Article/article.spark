@@ -1,9 +1,0 @@
-﻿<viewdata model="Blog.Article.ArticlePageViewModel"/>
-<include href="articlefull.spark" parse="spark"/>
-
-<article data="${Model.Uri}"></article>
-<section data-module="/comments/${Model.Uri}"></section>
-
-<content:scripts>
-    <script type="text/javascript" src="/content/article/get-article.js"></script>
-</content:scripts>
