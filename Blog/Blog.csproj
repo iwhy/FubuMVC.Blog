@@ -86,6 +86,7 @@
     </Compile>
     <None Include=".links" />
     <None Include=".package-manifest" />
+    <Content Include="Content\mL.css" />
     <None Include="Handlers\Home\index.spark" />
     <Compile Include="Handlers\Home\GetHandler.cs" />
     <Compile Include="Handlers\Home\HomeViewModel.cs" />
@@ -100,6 +101,7 @@
     <None Include="Content\master.less" />
     <Content Include="Content\master.js" />
     <Content Include="Content\util\amplify-1.1.0.js" />
+    <Content Include="Content\util\domReady.js" />
     <Content Include="Content\util\js-loader.js" />
     <Content Include="Content\util\module-loader.js" />
     <Content Include="Content\util\amplify.js" />
