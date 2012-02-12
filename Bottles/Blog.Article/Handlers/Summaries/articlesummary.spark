@@ -20,3 +20,5 @@
     <a href="${summary.Uri}#comments">Comments</a>
   </p>
 </article>
+
+<script type="text/javascript" src="/content/scripts/articles.js"></script>

@@ -9,10 +9,14 @@
       </time> <a href="/about/author" rel="author">${Model.Author}</a>
     </header>
     <section>
-      !{Model.Body}
+      ${Model.Body}
     </section>
     <p>
     </p>
 </article>
 <section data-module="/comments/${Model.Uri}">
 </section>
+
+<content:scripts>
+  <script type="text/javascript" src="/content/scripts/article.js"></script>
+</content:scripts>
