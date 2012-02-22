@@ -55,6 +55,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PetaPoco">
+      <HintPath>..\..\lib\PetaPoco.dll</HintPath>
+    </Reference>
     <Reference Include="Spark">
       <HintPath>..\..\lib\Spark.dll</HintPath>
     </Reference>
@@ -74,6 +77,8 @@
     <Compile Include="Handlers\CommentsInputModel.cs" />
     <Compile Include="Handlers\CommentsViewModel.cs" />
     <Compile Include="Handlers\CommentViewModel.cs" />
+    <Compile Include="Handlers\Count\CommentsCountInputModel.cs" />
+    <Compile Include="Handlers\Count\GetHandler.cs" />
     <Compile Include="Handlers\GetHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

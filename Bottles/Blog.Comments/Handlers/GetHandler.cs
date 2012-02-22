@@ -1,40 +1,23 @@
-using System;
-using System.Collections.Generic;
 using FubuMVC.Core;
+using PetaPoco;
 
 namespace Blog.Comments
 {
   public class GetHandler
   {
+    private readonly IDatabase _db;
+
+    public GetHandler(IDatabase db)
+    {
+      _db = db;
+    }
+
     [UrlPattern("comments/{Uri}")]
     public CommentsViewModel Execute(CommentsInputModel inputModel)
     {
       return new CommentsViewModel
       {
-        Comments = new List<CommentViewModel>
-        {
-          new CommentViewModel
-          {
-            Author = "Bob Duck",
-            PublishedDate = DateTime.Now.AddHours(-5),
-            Body =
-              "Vivamus sodales venenatis neque ut pretium. Nam aliquam libero ac tellus malesuada quis porttitor nisl vehicula. Maecenas quis nunc lorem."
-          },
-          new CommentViewModel
-          {
-            Author = "Jane Doe",
-            PublishedDate = DateTime.Now,
-            Body =
-              "Vivamus sodales venenatis neque ut pretium. Nam aliquam libero ac tellus malesuada quis porttitor nisl vehicula. Maecenas quis nunc lorem."
-          },
-          new CommentViewModel
-          {
-            Author = "Kong Door",
-            PublishedDate = DateTime.Now.AddHours(9),
-            Body =
-              "Sodales neque ut pretium. Nam ac tellus malesuada quis nisl vehicula. Maecenas quis nunc."
-          }
-        }
+        Comments = _db.Query<CommentViewModel>("select * from V_Comment where ArticleUri = @0", inputModel.Uri)
       };
     }
   }

@@ -5,10 +5,8 @@ namespace Blog.Article.Summaries
 {
   public class ArticleSummaryViewModel
   {
-    private const string more = "<!--more-->";
-
     public string Author { get; set; }
-    public DateTime PublishedDate { get; set; }
+    public DateTimeOffset PublishedDate { get; set; }
     public string Title { get; set; }
     public string Uri { get; set; }
     private string _summary;
@@ -18,7 +16,7 @@ namespace Blog.Article.Summaries
       get { return _summary; }
       set
       {
-        var text = value.Split(new []{more}, StringSplitOptions.None);
+        var text = value.Split(new []{ ArticleConstants.More }, StringSplitOptions.None);
         
         _summary = text.First();
       }

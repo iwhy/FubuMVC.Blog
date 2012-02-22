@@ -1,10 +1,10 @@
-﻿using System;
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 using Blog.Home;
 using FubuCore.Reflection;
 using FubuMVC.Core;
 using FubuMVC.Core.Runtime;
 using FubuMVC.Spark;
+using PetaPoco;
 
 namespace Blog
 {
@@ -32,6 +32,7 @@ namespace Blog
       Services(registry =>
       {
         registry.SetServiceIfNone<IJsonWriter, NewtonSoftJsonWriter>();
+        registry.SetServiceIfNone<IDatabase>(new Database("Blog"));
       });
     }
   }
