@@ -1,21 +1,21 @@
 using FubuMVC.Core;
-using PetaPoco;
+using Raven.Client;
 
 namespace Blog.Article
 {
   public class GetHandler
   {
-    private readonly IDatabase _db;
+      private readonly IDocumentSession _session;
 
-    public GetHandler(IDatabase db)
+    public GetHandler(IDocumentSession session)
     {
-      _db = db;
+        _session = session;
     }
 
     [UrlPattern("{Uri}")]
     public ArticleViewModel Execute(ArticleInputModel inputModel)
     {
-      return _db.Single<ArticleViewModel>("select * from V_Article");
+        return _session.Load<ArticleViewModel>(string.Format("article/{0}",inputModel.Uri));
     }
   }
 }

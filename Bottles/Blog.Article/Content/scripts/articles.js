@@ -4,7 +4,7 @@
 
   _.each(articles, function (article) {
     article = $(article);
-    html = article.text().trim()
+    html = article.text().trim();
     article.html(sd.makeHtml(html));
   });
 

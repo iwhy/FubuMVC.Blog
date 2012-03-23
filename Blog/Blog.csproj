@@ -54,11 +54,15 @@
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="PetaPoco">
-      <HintPath>..\lib\PetaPoco.dll</HintPath>
+    <Reference Include="Raven.Abstractions">
+      <HintPath>..\lib\RavenDB\Client\Raven.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Client.Lightweight">
+      <HintPath>..\lib\RavenDB\Client\Raven.Client.Lightweight.dll</HintPath>
     </Reference>
     <Reference Include="Spark">
       <HintPath>..\lib\Spark.dll</HintPath>
@@ -66,6 +70,7 @@
     <Reference Include="StructureMap">
       <HintPath>..\lib\StructureMap.dll</HintPath>
     </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -82,14 +87,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behaviors\TransactionBehavior.cs" />
     <Compile Include="BlogRegistry.cs" />
+    <Compile Include="Conventions\TransactionConvention.cs" />
     <Compile Include="NewtonSoftJsonWriter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <None Include=".links" />
     <None Include=".package-manifest" />
-    <Content Include="Content\mL.css" />
     <None Include="Handlers\Home\index.spark" />
     <Compile Include="Handlers\Home\GetHandler.cs" />
     <Compile Include="Handlers\Home\HomeViewModel.cs" />

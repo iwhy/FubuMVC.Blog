@@ -55,9 +55,8 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="PetaPoco, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\PetaPoco.dll</HintPath>
+    <Reference Include="Raven.Client.Lightweight">
+      <HintPath>..\..\lib\RavenDB\Client\Raven.Client.Lightweight.dll</HintPath>
     </Reference>
     <Reference Include="Spark">
       <HintPath>..\..\lib\Spark.dll</HintPath>
@@ -80,7 +79,7 @@
     <Compile Include="Handlers\ArticleViewModel.cs" />
     <Compile Include="Handlers\GetHandler.cs" />
     <Compile Include="Handlers\Summaries\ArticleSummariesViewModel.cs" />
-    <Compile Include="Handlers\Summaries\ArticleSummaryViewModel.cs" />
+    <Compile Include="Handlers\Summaries\ArticleViewModel.cs" />
     <Compile Include="Handlers\Summaries\GetHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

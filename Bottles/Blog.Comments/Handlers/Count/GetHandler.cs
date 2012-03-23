@@ -1,19 +1,26 @@
-using PetaPoco;
+using System.Linq;
+using Raven.Client;
+using Raven.Client.Linq;
 
 namespace Blog.Comments.Count
 {
   public class GetHandler
   {
-    private readonly IDatabase _db;
+      private readonly IDocumentSession _session;
 
-    public GetHandler(IDatabase db)
+      public GetHandler(IDocumentSession session)
     {
-      _db = db;
+        _session = session;
     }
 
     public dynamic Execute(CommentsCountInputModel inputModel)
     {
-      return _db.Query<int>("select count(*) from V_Comment where ArticleUri = @0", inputModel.ArticleUri);
+        RavenQueryStatistics stats;
+        _session.Query<CommentViewModel>()
+            .Where(x => x.ArticleUri == inputModel.ArticleUri)
+            .Statistics(out stats).ToArray();
+
+        return stats.TotalResults;
     }
   }
 }

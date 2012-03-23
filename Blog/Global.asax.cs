@@ -1,7 +1,10 @@
-﻿using System.Web;
+﻿using System;
+using System.Web;
 using Bottles;
 using FubuMVC.Core;
 using FubuMVC.StructureMap;
+using Raven.Client;
+using Raven.Client.Document;
 using StructureMap;
 
 namespace Blog
@@ -26,11 +29,25 @@ namespace Blog
 
         private static void SetupContainer(ConfigurationExpression x)
         {
+            var documentStore = new DocumentStore
+                {
+                    Url = "http://localhost:8080",
+                    DefaultDatabase = "MyBlog"
+                }.Initialize();
+
+            documentStore.Conventions.FindTypeTagName = t => t.Name.Replace("ViewModel", string.Empty);
+
+            Func<IDocumentSession> getSession = documentStore.OpenSession;
+
             x.Scan(i =>
             {
                 i.TheCallingAssembly();
                 i.Convention<SettingsScanner>();
             });
+
+            x.For<IDocumentSession>().HttpContextScoped().Use(getSession);
+
+            x.For<IDocumentStore>().Singleton().Use(documentStore);
             x.SetAllProperties(s => s.Matching(p => p.Name.EndsWith("Settings")));
         }
     }

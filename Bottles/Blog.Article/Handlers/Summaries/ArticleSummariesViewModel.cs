@@ -4,6 +4,6 @@ namespace Blog.Article.Summaries
 {
   public class ArticleSummariesViewModel
   {
-    public IEnumerable<ArticleSummaryViewModel> Summaries { get; set; }
+    public IEnumerable<ArticleViewModel> Summaries { get; set; }
   }
 }

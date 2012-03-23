@@ -1,22 +1,27 @@
-using PetaPoco;
+using System.Linq;
+using Raven.Client;
 
 namespace Blog.Article.Summaries
 {
-  public class GetHandler
-  {
-    private readonly IDatabase _db;
-
-    public GetHandler(IDatabase db)
+    public class GetHandler
     {
-      _db = db;
-    }
+        private readonly IDocumentSession _session;
 
-    public ArticleSummariesViewModel Execute()
-    {
-      return new ArticleSummariesViewModel
-      {
-        Summaries = _db.Query<ArticleSummaryViewModel>("select * from V_ArticleSummary")
-      };
+        public GetHandler(IDocumentSession session)
+        {
+            _session = session;
+        }
+
+        public ArticleSummariesViewModel Execute()
+        {
+            var articles = _session.Query<ArticleViewModel>()
+                //.OrderByDescending(x => x.PublishedDate)
+                .Take(10).ToList();
+
+            return new ArticleSummariesViewModel
+            {
+                Summaries = articles
+            };
+        }
     }
-  }
 }

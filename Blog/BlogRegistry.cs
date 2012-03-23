@@ -1,10 +1,10 @@
 ﻿using System.Runtime.CompilerServices;
+using Blog.Conventions;
 using Blog.Home;
 using FubuCore.Reflection;
 using FubuMVC.Core;
 using FubuMVC.Core.Runtime;
 using FubuMVC.Spark;
-using PetaPoco;
 
 namespace Blog
 {
@@ -29,10 +29,11 @@ namespace Blog
 
       Output.ToJson.WhenCallMatches(action => action.Method.ReturnParameter.HasAttribute<DynamicAttribute>());
 
+      ApplyConvention<TransactionConvention>();
+
       Services(registry =>
       {
         registry.SetServiceIfNone<IJsonWriter, NewtonSoftJsonWriter>();
-        registry.SetServiceIfNone<IDatabase>(new Database("Blog"));
       });
     }
   }

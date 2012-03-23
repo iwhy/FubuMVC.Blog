@@ -4,10 +4,11 @@ namespace Blog.Article
 {
   public class ArticleViewModel
   {
+    public string Id { get; set; }
     public string Author { get; set; }
-    public DateTimeOffset PublishedDate { get; set; }
+    public DateTime PublishedDate { get; set; }
     public string Title { get; set; }
-    public string Uri { get; set; }
+    public string Uri { get { return Id.Replace("article/", string.Empty); } }
     private string _body;
 
     public string Body

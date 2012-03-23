@@ -1,15 +1,16 @@
 using FubuMVC.Core;
-using PetaPoco;
+using Raven.Client;
+using Raven.Client.Linq;
 
 namespace Blog.Comments
 {
   public class GetHandler
   {
-    private readonly IDatabase _db;
+    private readonly IDocumentSession _session;
 
-    public GetHandler(IDatabase db)
+    public GetHandler(IDocumentSession session)
     {
-      _db = db;
+        _session = session;
     }
 
     [UrlPattern("comments/{Uri}")]
@@ -17,7 +18,9 @@ namespace Blog.Comments
     {
       return new CommentsViewModel
       {
-        Comments = _db.Query<CommentViewModel>("select * from V_Comment where ArticleUri = @0", inputModel.Uri)
+        Comments = _session.Query<CommentViewModel>()
+            .Where(x => x.ArticleUri.Equals(inputModel.Uri))
+            .OrderByDescending(x => x.PublishedDate)
       };
     }
   }

@@ -55,8 +55,8 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="PetaPoco">
-      <HintPath>..\..\lib\PetaPoco.dll</HintPath>
+    <Reference Include="Raven.Client.Lightweight">
+      <HintPath>..\..\lib\RavenDB\Client\Raven.Client.Lightweight.dll</HintPath>
     </Reference>
     <Reference Include="Spark">
       <HintPath>..\..\lib\Spark.dll</HintPath>
@@ -78,6 +78,7 @@
     <Compile Include="Handlers\CommentsViewModel.cs" />
     <Compile Include="Handlers\CommentViewModel.cs" />
     <Compile Include="Handlers\Count\CommentsCountInputModel.cs" />
+    <Compile Include="Handlers\Count\CommentsViewModel.cs" />
     <Compile Include="Handlers\Count\GetHandler.cs" />
     <Compile Include="Handlers\GetHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
