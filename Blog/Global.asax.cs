@@ -1,10 +1,8 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Web;
 using Bottles;
 using FubuMVC.Core;
 using FubuMVC.StructureMap;
-using Raven.Client;
-using Raven.Client.Document;
 using StructureMap;
 
 namespace Blog
@@ -17,38 +15,20 @@ namespace Blog
         {
             FubuApplication
                 .For<BlogRegistry>()
-                .StructureMap(() => new Container(SetupContainer))
+                .StructureMap(() => new Container(x =>
+                    x.Scan(i =>
+                    {
+                        i.TheCallingAssembly();
+                        PackageRegistry.PackageAssemblies.Each(i.Assembly);
+                        i.LookForRegistries();
+                    })))
                 .Bootstrap();
 
-            // If there is an error during bootstrapping, it will not automatically be considered
-            // fatal and there will be no YSOD.  This is to help during initial debugging and 
-            // troubleshooting package loading. Normally, however, you want a YSOD if there is
-            // a bootstrapping failure or a package-loading failure. This next line ensures that.
-            PackageRegistry.AssertNoFailures(); 
+            PackageRegistry.AssertNoFailures();
         }
 
         private static void SetupContainer(ConfigurationExpression x)
         {
-            var documentStore = new DocumentStore
-                {
-                    Url = "http://localhost:8080",
-                    DefaultDatabase = "MyBlog"
-                }.Initialize();
-
-            documentStore.Conventions.FindTypeTagName = t => t.Name.Replace("ViewModel", string.Empty);
-
-            Func<IDocumentSession> getSession = documentStore.OpenSession;
-
-            x.Scan(i =>
-            {
-                i.TheCallingAssembly();
-                i.Convention<SettingsScanner>();
-            });
-
-            x.For<IDocumentSession>().HttpContextScoped().Use(getSession);
-
-            x.For<IDocumentStore>().Singleton().Use(documentStore);
-            x.SetAllProperties(s => s.Matching(p => p.Name.EndsWith("Settings")));
         }
     }
 }

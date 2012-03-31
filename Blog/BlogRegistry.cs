@@ -1,5 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
-using Blog.Conventions;
+using Blog.Behaviors;
 using Blog.Home;
 using FubuCore.Reflection;
 using FubuMVC.Core;
@@ -29,7 +29,7 @@ namespace Blog
 
       Output.ToJson.WhenCallMatches(action => action.Method.ReturnParameter.HasAttribute<DynamicAttribute>());
 
-      ApplyConvention<TransactionConvention>();
+      Policies.WrapBehaviorChainsWith<RavenDbBehavior>();
 
       Services(registry =>
       {

@@ -87,13 +87,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Behaviors\TransactionBehavior.cs" />
+    <Compile Include="Behaviors\RavenDbBehavior.cs" />
     <Compile Include="BlogRegistry.cs" />
-    <Compile Include="Conventions\TransactionConvention.cs" />
     <Compile Include="NewtonSoftJsonWriter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="RavenDBRegistry.cs" />
     <None Include=".links" />
     <None Include=".package-manifest" />
     <None Include="Handlers\Home\index.spark" />
