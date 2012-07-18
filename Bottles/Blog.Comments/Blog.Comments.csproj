@@ -32,37 +32,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bottles">
-      <HintPath>..\..\lib\Bottles.dll</HintPath>
+      <HintPath>..\..\packages\Bottles\Bottles.dll</HintPath>
     </Reference>
     <Reference Include="FubuCore">
-      <HintPath>..\..\lib\FubuCore.dll</HintPath>
-    </Reference>
-    <Reference Include="FubuLocalization">
-      <HintPath>..\..\lib\FubuLocalization.dll</HintPath>
+      <HintPath>..\..\packages\FubuCore\FubuCore.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.Core">
-      <HintPath>..\..\lib\FubuMVC.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="FubuMVC.Spark">
-      <HintPath>..\..\lib\FubuMVC.Spark.dll</HintPath>
-    </Reference>
-    <Reference Include="FubuMVC.StructureMap">
-      <HintPath>..\..\lib\FubuMVC.StructureMap.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\..\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\packages\FubuMVC\FubuMVC.Core.dll</HintPath>
     </Reference>
     <Reference Include="Raven.Client.Lightweight">
-      <HintPath>..\..\lib\RavenDB\Client\Raven.Client.Lightweight.dll</HintPath>
-    </Reference>
-    <Reference Include="Spark">
-      <HintPath>..\..\lib\Spark.dll</HintPath>
-    </Reference>
-    <Reference Include="StructureMap">
-      <HintPath>..\..\lib\StructureMap.dll</HintPath>
+      <HintPath>..\..\packages\RavenDB\Client\Raven.Client.Lightweight.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

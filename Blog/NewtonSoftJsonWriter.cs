@@ -23,6 +23,8 @@ namespace Blog
 
         public void Write(object output, string mimeType)
         {
+            if(output == null) return;
+
             var typeDef = output.GetType();
             if(typeDef.Namespace != null
                 && !typeDef.Namespace.Contains("Blog"))

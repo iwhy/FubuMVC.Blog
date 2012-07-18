@@ -37,42 +37,43 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bottles">
-      <HintPath>..\lib\Bottles.dll</HintPath>
+      <HintPath>..\packages\Bottles\Bottles.dll</HintPath>
     </Reference>
     <Reference Include="FubuCore">
-      <HintPath>..\lib\FubuCore.dll</HintPath>
+      <HintPath>..\packages\FubuCore\FubuCore.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.Core">
-      <HintPath>..\lib\FubuMVC.Core.dll</HintPath>
+      <HintPath>..\packages\FubuMVC\FubuMVC.Core.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.Diagnostics">
-      <HintPath>..\lib\FubuMVC.Diagnostics.dll</HintPath>
+      <HintPath>..\packages\FubuMVC\FubuMVC.Diagnostics.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.Spark">
-      <HintPath>..\lib\FubuMVC.Spark.dll</HintPath>
+      <HintPath>..\packages\FubuMVC\FubuMVC.Spark.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.StructureMap">
-      <HintPath>..\lib\FubuMVC.StructureMap.dll</HintPath>
+      <HintPath>..\packages\FubuMVC\FubuMVC.StructureMap.dll</HintPath>
     </Reference>
-    <Reference Include="HtmlTags, Version=1.1.0.78, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="HtmlTags, Version=1.1.0.78, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlTags\HtmlTags.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <HintPath>..\packages\StructureMap\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Raven.Abstractions">
-      <HintPath>..\lib\RavenDB\Client\Raven.Abstractions.dll</HintPath>
+      <HintPath>..\packages\RavenDB\Client\Raven.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Raven.Client.Lightweight">
-      <HintPath>..\lib\RavenDB\Client\Raven.Client.Lightweight.dll</HintPath>
+      <HintPath>..\packages\RavenDB\Client\Raven.Client.Lightweight.dll</HintPath>
     </Reference>
     <Reference Include="Spark">
-      <HintPath>..\lib\Spark.dll</HintPath>
+      <HintPath>..\packages\Spark\Spark.dll</HintPath>
     </Reference>
     <Reference Include="StructureMap">
-      <HintPath>..\lib\StructureMap.dll</HintPath>
+      <HintPath>..\packages\StructureMap\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -168,4 +169,8 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>
