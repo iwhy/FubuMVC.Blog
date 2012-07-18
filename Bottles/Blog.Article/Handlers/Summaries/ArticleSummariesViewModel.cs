@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace Blog.Article.Summaries
+namespace Blog.Articles.Summaries
 {
   public class ArticleSummariesViewModel
   {
-    public IEnumerable<ArticleViewModel> Summaries { get; set; }
+    public IEnumerable<ArticleSummaryViewModel> Summaries { get; set; }
   }
 }

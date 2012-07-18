@@ -1,40 +1,33 @@
-﻿using System.Runtime.CompilerServices;
-using Blog.Behaviors;
+﻿using Blog.Behaviors;
 using Blog.Home;
-using FubuCore.Reflection;
 using FubuMVC.Core;
+using FubuMVC.Core.Registration.Conventions;
 using FubuMVC.Core.Runtime;
 using FubuMVC.Spark;
 
 namespace Blog
 {
-  public class BlogRegistry : FubuRegistry
-  {
-    public BlogRegistry()
+    public class BlogRegistry : FubuRegistry
     {
-#if DEBUG
-      IncludeDiagnostics(true);
-#endif
+        public BlogRegistry()
+        {
+            Import<SparkEngine>();
+            Import<HandlerConvention>();
 
-      Applies.ToAllPackageAssemblies();
-      Routes.HomeIs<GetHandler>(x => x.Execute());
+            Applies
+                .ToThisAssembly()
+                .ToAllPackageAssemblies();
 
-      ApplyHandlerConventions();
+            Routes.HomeIs<GetHandler>(x => x.Execute());
 
-      this.UseSpark();
+            Views.TryToAttachWithDefaultConventions();
 
-      Views
-          .TryToAttachWithDefaultConventions()
-          .TryToAttachViewsInPackages();
+            Policies.WrapBehaviorChainsWith<RavenDbBehavior>();
 
-      Output.ToJson.WhenCallMatches(action => action.Method.ReturnParameter.HasAttribute<DynamicAttribute>());
-
-      Policies.WrapBehaviorChainsWith<RavenDbBehavior>();
-
-      Services(registry =>
-      {
-        registry.SetServiceIfNone<IJsonWriter, NewtonSoftJsonWriter>();
-      });
+            Services(registry =>
+            {
+                registry.SetServiceIfNone<IJsonWriter, NewtonSoftJsonWriter>();
+            });
+        }
     }
-  }
 }

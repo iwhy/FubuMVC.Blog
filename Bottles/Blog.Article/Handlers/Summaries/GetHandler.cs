@@ -1,7 +1,9 @@
 using System.Linq;
+using Blog.Core.Domain;
+using Blog.Core.Extensions;
 using Raven.Client;
 
-namespace Blog.Article.Summaries
+namespace Blog.Articles.Summaries
 {
     public class GetHandler
     {
@@ -14,13 +16,17 @@ namespace Blog.Article.Summaries
 
         public ArticleSummariesViewModel Execute()
         {
-            var articles = _session.Query<ArticleViewModel>()
-                //.OrderByDescending(x => x.PublishedDate)
+            var articles = _session.Query<Article>()
+                .OrderByDescending(x => x.PublishedDate)
                 .Take(10).ToList();
 
+        _session.Store(new Article
+        {
+            Id = "test"
+        });
             return new ArticleSummariesViewModel
             {
-                Summaries = articles
+                Summaries = articles.Select(x => x.DynamicMap<ArticleSummaryViewModel>())
             };
         }
     }

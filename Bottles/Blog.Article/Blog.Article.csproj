@@ -8,8 +8,8 @@
     <ProjectGuid>{FAD69C8A-3023-425E-9F2A-C1A72C396BA6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Blog.Article</RootNamespace>
-    <AssemblyName>Blog.Article</AssemblyName>
+    <RootNamespace>Blog.Articles</RootNamespace>
+    <AssemblyName>Blog.Articles</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\lib\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Bottles">
       <HintPath>..\..\lib\Bottles.dll</HintPath>
     </Reference>
@@ -74,12 +77,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArticleRegistry.cs" />
-    <Compile Include="Handlers\ArticleConstants.cs" />
     <Compile Include="Handlers\ArticleInputModel.cs" />
     <Compile Include="Handlers\ArticleViewModel.cs" />
     <Compile Include="Handlers\GetHandler.cs" />
     <Compile Include="Handlers\Summaries\ArticleSummariesViewModel.cs" />
-    <Compile Include="Handlers\Summaries\ArticleViewModel.cs" />
+    <Compile Include="Handlers\Summaries\ArticleSummaryViewModel.cs" />
     <Compile Include="Handlers\Summaries\GetHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -98,6 +100,12 @@
   <ItemGroup>
     <Content Include="Content\scripts\article.js" />
     <Content Include="Content\scripts\articles.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Blog.Core\Blog.Core.csproj">
+      <Project>{57645F4F-78C2-4F07-B300-66B3293E5FA7}</Project>
+      <Name>Blog.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,4 +1,4 @@
-﻿namespace Blog.Article
+﻿namespace Blog.Articles
 {
   public class ArticleInputModel
   {

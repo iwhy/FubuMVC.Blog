@@ -1,0 +1,20 @@
+{
+  "Name": "Temp/BlogArticle/ByPublishedDateSortByPublishedDate",
+  "Map": "from doc in docs.BlogArticle\r\nselect new { PublishedDate = doc.PublishedDate }",
+  "Maps": [
+    "from doc in docs.BlogArticle\r\nselect new { PublishedDate = doc.PublishedDate }"
+  ],
+  "Reduce": null,
+  "TransformResults": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "IsTemp": true,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {
+    "PublishedDate": "String"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Type": "Temp"
+}

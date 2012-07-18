@@ -45,12 +45,16 @@
     <Reference Include="FubuMVC.Core">
       <HintPath>..\lib\FubuMVC.Core.dll</HintPath>
     </Reference>
+    <Reference Include="FubuMVC.Diagnostics">
+      <HintPath>..\lib\FubuMVC.Diagnostics.dll</HintPath>
+    </Reference>
     <Reference Include="FubuMVC.Spark">
       <HintPath>..\lib\FubuMVC.Spark.dll</HintPath>
     </Reference>
     <Reference Include="FubuMVC.StructureMap">
       <HintPath>..\lib\FubuMVC.StructureMap.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlTags, Version=1.1.0.78, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
@@ -89,6 +93,7 @@
   <ItemGroup>
     <Compile Include="Behaviors\RavenDbBehavior.cs" />
     <Compile Include="BlogRegistry.cs" />
+    <Compile Include="Conventions\JsonConvention.cs" />
     <Compile Include="NewtonSoftJsonWriter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -127,7 +132,12 @@
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Blog.Core\Blog.Core.csproj">
+      <Project>{57645F4F-78C2-4F07-B300-66B3293E5FA7}</Project>
+      <Name>Blog.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

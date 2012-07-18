@@ -1,6 +1,7 @@
 ﻿using System;
+using Blog.Core;
 
-namespace Blog.Article
+namespace Blog.Articles
 {
   public class ArticleViewModel
   {

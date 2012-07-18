@@ -1,7 +1,9 @@
+using Blog.Core.Domain;
+using Blog.Core.Extensions;
 using FubuMVC.Core;
 using Raven.Client;
 
-namespace Blog.Article
+namespace Blog.Articles
 {
   public class GetHandler
   {
@@ -15,7 +17,10 @@ namespace Blog.Article
     [UrlPattern("{Uri}")]
     public ArticleViewModel Execute(ArticleInputModel inputModel)
     {
-        return _session.Load<ArticleViewModel>(string.Format("article/{0}",inputModel.Uri));
+        var article = _session
+            .Load<Article>(string.Format("article/{0}",inputModel.Uri));
+
+        return article.DynamicMap<ArticleViewModel>();
     }
   }
 }

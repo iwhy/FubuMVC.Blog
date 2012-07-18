@@ -1,0 +1,20 @@
+{
+  "Name": "Temp/Comment/ByArticleUriAndPublishedDateSortByPublishedDate",
+  "Map": "from doc in docs.Comment\r\nselect new { PublishedDate = doc.PublishedDate, ArticleUri = doc.ArticleUri }",
+  "Maps": [
+    "from doc in docs.Comment\r\nselect new { PublishedDate = doc.PublishedDate, ArticleUri = doc.ArticleUri }"
+  ],
+  "Reduce": null,
+  "TransformResults": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "IsTemp": true,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {
+    "PublishedDate": "String"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Type": "Temp"
+}

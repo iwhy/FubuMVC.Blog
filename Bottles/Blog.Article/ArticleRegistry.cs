@@ -1,6 +1,6 @@
 using FubuMVC.Core;
 
-namespace Blog.Article
+namespace Blog.Articles
 {
   public class ArticleRegistry : IFubuRegistryExtension
   {
