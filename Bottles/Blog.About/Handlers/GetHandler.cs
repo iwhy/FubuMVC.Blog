@@ -1,11 +1,8 @@
-﻿using FubuMVC.Core.UI.Navigation;
-
-namespace Blog.About
+﻿namespace Blog.About
 {
     public class GetHandler
     {
-        [MenuItemAttribute("MyBlog")]
-        public AboutViewModel Execute()
+        public AboutViewModel Execute(AboutInputModel inputModel)
         {
             return new AboutViewModel();
         }

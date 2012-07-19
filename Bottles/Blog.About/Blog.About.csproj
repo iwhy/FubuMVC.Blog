@@ -37,6 +37,10 @@
     <Reference Include="FubuCore">
       <HintPath>..\..\packages\FubuCore\FubuCore.dll</HintPath>
     </Reference>
+    <Reference Include="FubuLocalization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\FubuMVC\FubuLocalization.dll</HintPath>
+    </Reference>
     <Reference Include="FubuMVC.Core">
       <HintPath>..\..\packages\FubuMVC\FubuMVC.Core.dll</HintPath>
     </Reference>
@@ -50,13 +54,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutRegistry.cs" />
+    <Compile Include="Handlers\AboutInputModel.cs" />
     <Compile Include="Handlers\GetHandler.cs" />
     <Compile Include="Handlers\AboutViewModel.cs" />
     <Compile Include="Handlers\Author\AuthorViewModel.cs" />
     <Compile Include="Handlers\Author\GetHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Blog.Core\Blog.Core.csproj">
+      <Project>{57645F4F-78C2-4F07-B300-66B3293E5FA7}</Project>
+      <Name>Blog.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include=".package-manifest" />
     <None Include="Handlers\about.spark" />

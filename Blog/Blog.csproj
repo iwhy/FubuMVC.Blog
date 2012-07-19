@@ -97,7 +97,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behaviors\RavenDbBehavior.cs" />
-    <Compile Include="BlogNavigationRegistry.cs" />
     <Compile Include="BlogRegistry.cs" />
     <Compile Include="Conventions\JsonConvention.cs" />
     <Compile Include="Handlers\Home\HomeInputModel.cs" />

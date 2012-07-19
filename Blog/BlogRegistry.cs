@@ -1,8 +1,10 @@
 ﻿using Blog.Behaviors;
+using Blog.Core.Constants;
 using Blog.Home;
 using FubuMVC.Core;
 using FubuMVC.Core.Registration.Conventions;
 using FubuMVC.Core.Runtime;
+using FubuMVC.Core.UI.Navigation;
 using FubuMVC.Spark;
 
 namespace Blog
@@ -22,7 +24,11 @@ namespace Blog
 
             Views.TryToAttachWithDefaultConventions();
 
-            Navigation<BlogNavigationRegistry>();
+            Navigation(x =>
+            {
+                x.ForMenu(StringConstants.BlogName);
+                x.Add += MenuNode.ForInput<HomeInputModel>("Blog Home");
+            });
 
             Policies.WrapBehaviorChainsWith<RavenDbBehavior>();
 
