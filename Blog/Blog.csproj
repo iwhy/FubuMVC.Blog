@@ -114,6 +114,9 @@
     <None Include="Shared\Application.spark">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Shared\_BootStrapFailure.spark">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Shared\_Navigation.spark">
       <SubType>Designer</SubType>
     </None>
@@ -124,6 +127,26 @@
     <Content Include="Content\master.js" />
     <Content Include="Content\util\amplify-1.1.0.js" />
     <Content Include="Content\util\domReady.js" />
+    <Content Include="Content\util\google-code-prettify\lang-apollo.js" />
+    <Content Include="Content\util\google-code-prettify\lang-clj.js" />
+    <Content Include="Content\util\google-code-prettify\lang-css.js" />
+    <Content Include="Content\util\google-code-prettify\lang-go.js" />
+    <Content Include="Content\util\google-code-prettify\lang-hs.js" />
+    <Content Include="Content\util\google-code-prettify\lang-lisp.js" />
+    <Content Include="Content\util\google-code-prettify\lang-lua.js" />
+    <Content Include="Content\util\google-code-prettify\lang-ml.js" />
+    <Content Include="Content\util\google-code-prettify\lang-n.js" />
+    <Content Include="Content\util\google-code-prettify\lang-proto.js" />
+    <Content Include="Content\util\google-code-prettify\lang-scala.js" />
+    <Content Include="Content\util\google-code-prettify\lang-sql.js" />
+    <Content Include="Content\util\google-code-prettify\lang-tex.js" />
+    <Content Include="Content\util\google-code-prettify\lang-vb.js" />
+    <Content Include="Content\util\google-code-prettify\lang-vhdl.js" />
+    <Content Include="Content\util\google-code-prettify\lang-wiki.js" />
+    <Content Include="Content\util\google-code-prettify\lang-xq.js" />
+    <Content Include="Content\util\google-code-prettify\lang-yaml.js" />
+    <None Include="Content\prettify.less" />
+    <Content Include="Content\util\google-code-prettify\prettify.js" />
     <Content Include="Content\util\js-loader.js" />
     <Content Include="Content\util\module-loader.js" />
     <Content Include="Content\util\amplify.js" />

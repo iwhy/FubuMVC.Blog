@@ -3,4 +3,5 @@
       html = article.text().trim(),
       md = sd.makeHtml(html);
   article.html(md);
+  prettyPrint();
 });
