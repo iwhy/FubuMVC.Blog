@@ -1,4 +1,5 @@
-﻿a {
+﻿
+a {
   color: #384C4C;
   text-decoration: none;
 }
@@ -24,7 +25,7 @@ body {
   font: .8em 'Droid Sans', arial, serif;
   > div {
     width: 960px;
-    margin: 0 auto;
+    margin: 30px auto;
   }
 }
 
@@ -50,16 +51,46 @@ time {
 }
 
 ul {
-  font-size: 1em;
-  list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+article ul, section ul {
+  font-size: 1em;
+  list-style-type: none;
   width: 620px;
   li {
     padding: 5px;
   }
   li:nth-of-type(odd) {
     background-color: #f9f9f9;
+  }
+}
+
+.header {
+  color: #FFF;
+  background-color: #363636;
+  box-shadow: #000 0px -5px 10px 5px;
+  -webkit-box-shadow: #000 0px -5px 10px 5px;
+  -moz-box-shadow: #000 0px -5px 10px 5px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  h1 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+  }
+  nav {
+    overflow: hidden;
+    float: left;
+  }
+  div {
+    overflow: hidden;
+    margin: 5px auto;
+    width: 940px;
   }
 }
 

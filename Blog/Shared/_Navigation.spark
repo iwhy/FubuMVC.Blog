@@ -1,1 +1,10 @@
-﻿
+﻿<use namespace="Blog.Core.Extensions"/>
+
+<div class="header">
+  <div>
+    <h1>MY BLOG</h1>
+    <nav>
+      ${this.Menu()}
+    </nav>
+  </div>
+</div>

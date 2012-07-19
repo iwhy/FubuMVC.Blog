@@ -1,11 +1,14 @@
-﻿namespace Blog.About
-{
-  public class GetHandler
-  {
-      public AboutViewModel Execute()
-      {
-          return new AboutViewModel();
-      }
+﻿using FubuMVC.Core.UI.Navigation;
 
-  }
+namespace Blog.About
+{
+    public class GetHandler
+    {
+        [MenuItemAttribute("MyBlog")]
+        public AboutViewModel Execute()
+        {
+            return new AboutViewModel();
+        }
+
+    }
 }

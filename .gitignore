@@ -1,5 +1,6 @@
 bin/
 obj/
+logs/
 *.user
 *.ReSharper
 _ReSharper.*
@@ -10,3 +11,4 @@ _ReSharper.*
 *sass-cache/
 *.css
 *.csproj.*
+*.log

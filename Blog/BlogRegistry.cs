@@ -18,9 +18,11 @@ namespace Blog
                 .ToThisAssembly()
                 .ToAllPackageAssemblies();
 
-            Routes.HomeIs<GetHandler>(x => x.Execute());
+            Routes.HomeIs<GetHandler>(x => x.Execute(null));
 
             Views.TryToAttachWithDefaultConventions();
+
+            Navigation<BlogNavigationRegistry>();
 
             Policies.WrapBehaviorChainsWith<RavenDbBehavior>();
 

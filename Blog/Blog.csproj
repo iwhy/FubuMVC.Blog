@@ -42,6 +42,10 @@
     <Reference Include="FubuCore">
       <HintPath>..\packages\FubuCore\FubuCore.dll</HintPath>
     </Reference>
+    <Reference Include="FubuLocalization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FubuMVC\FubuLocalization.dll</HintPath>
+    </Reference>
     <Reference Include="FubuMVC.Core">
       <HintPath>..\packages\FubuMVC\FubuMVC.Core.dll</HintPath>
     </Reference>
@@ -93,8 +97,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behaviors\RavenDbBehavior.cs" />
+    <Compile Include="BlogNavigationRegistry.cs" />
     <Compile Include="BlogRegistry.cs" />
     <Compile Include="Conventions\JsonConvention.cs" />
+    <Compile Include="Handlers\Home\HomeInputModel.cs" />
     <Compile Include="NewtonSoftJsonWriter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -109,7 +115,9 @@
     <None Include="Shared\Application.spark">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Shared\_Navigation.spark" />
+    <None Include="Shared\_Navigation.spark">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Shared\Html.spark" />
   </ItemGroup>
   <ItemGroup>

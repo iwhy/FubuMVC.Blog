@@ -1,5 +1,5 @@
 ﻿<use master="Html"/>
 <div>
-    <use:view/>
   <Navigation/>
+  <use:view/>
 </div>
