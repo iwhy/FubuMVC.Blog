@@ -3,5 +3,6 @@
   <include>..\Bottles\Blog.Information</include>
   <include>..\Bottles\Blog.Articles</include>
   <include>..\Bottles\Blog.Comments</include>
+  <include>..\Bottles\Blog.Authorization</include>
   <EnvironmentAssembly>Blog</EnvironmentAssembly>
 </links>

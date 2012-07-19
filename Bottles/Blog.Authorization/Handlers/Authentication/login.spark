@@ -1,0 +1,4 @@
+﻿<viewdata model="Blog.Authorization.Authentication.AuthenticationViewModel"/>
+<header>
+    <h2>Login</h2>
+</header>

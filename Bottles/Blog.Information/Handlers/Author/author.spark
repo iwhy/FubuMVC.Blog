@@ -1,4 +1,4 @@
-﻿<viewdata model="Blog.About.Author.AuthorViewModel"/>
+﻿<viewdata model="Blog.Information.Author.AuthorViewModel"/>
 <header>
     <h2>Author</h2>
 </header>

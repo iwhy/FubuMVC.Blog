@@ -11,12 +11,21 @@ namespace Blog.Core.Extensions
         {
             var service = page.Get<INavigationService>();
             var items = service.MenuFor(new NavigationKey("MyBlog"));
-
             var menu = new HtmlTag("ul");
 
             items.Each(x =>
-                menu.Append(new HtmlTag("li")
-                    .Append(new LinkTag(x.Key, x.Url))));
+            {
+                var link = new LinkTag(x.Key, x.Url);
+                var li = new HtmlTag("li");
+
+                if (x.MenuItemState == MenuItemState.Active)
+                {
+                    li.AddClass("current");
+                }
+
+                menu.Append(li.Append(link));
+
+            });
 
             return menu;
         }

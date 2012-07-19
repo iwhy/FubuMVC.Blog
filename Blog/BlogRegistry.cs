@@ -27,7 +27,7 @@ namespace Blog
             Navigation(x =>
             {
                 x.ForMenu(StringConstants.BlogName);
-                x.Add += MenuNode.ForInput<HomeInputModel>("Blog Home");
+                x.Add += MenuNode.ForInput<HomeInputModel>("Home");
             });
 
             Policies.WrapBehaviorChainsWith<RavenDbBehavior>();

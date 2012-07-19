@@ -1,17 +1,18 @@
+using Blog.Authorization.Authentication;
 using Blog.Core.Constants;
 using FubuMVC.Core;
 using FubuMVC.Core.UI.Navigation;
 
-namespace Blog.Information
+namespace Blog.Authorization
 {
-    public class InformationRegistry : IFubuRegistryExtension
+    public class AuthorizationRegistry : IFubuRegistryExtension
     {
         public void Configure(FubuRegistry registry)
         {
             registry.Navigation(x =>
             {
                 x.ForMenu(StringConstants.BlogName);
-                x.InsertAfter["Home"] = MenuNode.ForInput<AboutInputModel>("About");
+                x.InsertAfter["About"] = MenuNode.ForInput<AuthenticationInputModel>("Login");
             });
         }
     }
