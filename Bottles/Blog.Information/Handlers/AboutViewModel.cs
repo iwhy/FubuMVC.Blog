@@ -1,4 +1,4 @@
-namespace Blog.About
+namespace Blog.Information
 {
     public class AboutViewModel
     {

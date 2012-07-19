@@ -1,4 +1,4 @@
-namespace Blog.About.Author
+namespace Blog.Information.Author
 {
     public class AuthorViewModel
     {
