@@ -5,6 +5,7 @@ using FubuMVC.Core;
 using FubuMVC.Core.Registration.Conventions;
 using FubuMVC.Core.Runtime;
 using FubuMVC.Core.UI.Navigation;
+using FubuMVC.Less;
 using FubuMVC.Spark;
 
 namespace Blog
@@ -14,11 +15,13 @@ namespace Blog
         public BlogRegistry()
         {
             Import<SparkEngine>();
+            Import<LessExtension>();
             Import<HandlerConvention>();
-
             Applies
                 .ToThisAssembly()
                 .ToAllPackageAssemblies();
+
+            Assets.CombineAllUniqueAssetRequests();
 
             Routes.HomeIs<GetHandler>(x => x.Execute(null));
 

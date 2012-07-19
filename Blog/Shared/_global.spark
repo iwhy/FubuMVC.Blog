@@ -1,0 +1,4 @@
+﻿<use namespace="FubuCore" />
+﻿<use namespace="FubuMVC.Core.UI" />
+<use namespace="Blog.Core.Extensions"/>
+<use namespace="System.Linq" />

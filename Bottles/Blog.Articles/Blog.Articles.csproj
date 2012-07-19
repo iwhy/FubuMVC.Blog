@@ -72,6 +72,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".package-manifest" />
+    <None Include="articles.script.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Handlers\article.spark">
       <SubType>Designer</SubType>
     </None>
