@@ -53,12 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Handlers\Authors\AuthorsInputModel.cs" />
     <Compile Include="InformationRegistry.cs" />
     <Compile Include="Handlers\AboutInputModel.cs" />
     <Compile Include="Handlers\GetHandler.cs" />
     <Compile Include="Handlers\AboutViewModel.cs" />
-    <Compile Include="Handlers\Author\AuthorViewModel.cs" />
-    <Compile Include="Handlers\Author\GetHandler.cs" />
+    <Compile Include="Handlers\Authors\AuthorsViewModel.cs" />
+    <Compile Include="Handlers\Authors\GetHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,7 +71,7 @@
   <ItemGroup>
     <None Include=".package-manifest" />
     <None Include="Handlers\about.spark" />
-    <None Include="Handlers\Author\author.spark" />
+    <None Include="Handlers\Authors\authors.spark" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

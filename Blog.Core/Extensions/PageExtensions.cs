@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Blog.Core.Constants;
 using FubuMVC.Core.UI.Navigation;
 using FubuMVC.Core.View;
 using HtmlTags;
@@ -7,10 +8,10 @@ namespace Blog.Core.Extensions
 {
     public static class PageExtensions
     {
-        public static HtmlTag Menu(this IFubuPage page)
+        public static HtmlTag Menu(this IFubuPage page, string menuName = null)
         {
             var service = page.Get<INavigationService>();
-            var items = service.MenuFor(new NavigationKey("MyBlog"));
+            var items = service.MenuFor(new NavigationKey(menuName ?? StringConstants.BlogName));
             var menu = new HtmlTag("ul");
 
             items.Each(x =>

@@ -1,4 +1,4 @@
-﻿require(['util/module-loader', 'util/jquery'], function (mL, $) {
+﻿require(['module-loader', 'jquery'], function (mL, $) {
 
   $.ajaxSetup({
     statusCode: {

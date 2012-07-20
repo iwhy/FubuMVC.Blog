@@ -1,4 +1,4 @@
-﻿define(['util/jquery', 'util/js-loader', 'util/domReady'], function ($, jL, domReady) {
+﻿define('module-loader', ['jquery', 'js-loader', 'domReady'], function ($, jL, domReady) {
   var loader = {},
       page = $('html'),
       attr = 'data-module',

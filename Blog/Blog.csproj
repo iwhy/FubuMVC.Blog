@@ -161,8 +161,6 @@
     <Content Include="Content\scripts\util\google-code-prettify\prettify.js" />
     <Content Include="Content\scripts\util\google-font-loader.js" />
     <Content Include="Content\scripts\util\jquery-1.7.1.js" />
-    <Content Include="Content\scripts\util\jquery.js" />
-    <Content Include="Content\scripts\util\jquery.tmpl-1.0.0.js" />
     <Content Include="Content\scripts\util\js-loader.js" />
     <Content Include="Content\scripts\util\less-1.2.1.min.js" />
     <Content Include="Content\scripts\util\module-loader.js" />

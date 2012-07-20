@@ -9,7 +9,7 @@
   self: false, setInterval: false */
 
 
-define(function () {
+define('domReady', function () {
     var isBrowser = typeof window !== "undefined" && window.document,
         isPageLoaded = !isBrowser,
         doc = isBrowser ? document : null,

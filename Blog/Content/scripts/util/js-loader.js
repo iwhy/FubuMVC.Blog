@@ -1,4 +1,4 @@
-﻿define(['util/jquery'], function ($) {
+﻿define('js-loader', ['jquery'], function ($) {
   var loader = {}, scripts, source, $script;
 
   loader.load = function (html) {

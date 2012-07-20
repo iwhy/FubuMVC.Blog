@@ -1,4 +1,3 @@
-﻿define(['util/underscore-1.3.1'],
-  function () {
-    return _;
-  });
+﻿define('underscore', function () {
+  return _;
+});

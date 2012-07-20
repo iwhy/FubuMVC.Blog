@@ -1,4 +1,4 @@
-﻿define('articles',['util/jquery', 'util/showdown', 'util/underscore'], function ($, sd, _) {
+﻿define('articles',['jquery', 'showdown', 'underscore'], function ($, sd, _) {
   var articles = $('section', 'article'),
       html;
 
