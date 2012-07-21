@@ -6,7 +6,7 @@
   <h2>Login</h2>
 </header>
 <div>
-  <form action="authorization/login" method="POST" id="openid_form">
+  <form action="/authorization/login" method="POST" id="openid_form">
     <input type="hidden" name="action" value="verify" />
     <fieldset>
       <legend>Sign-in or Create New Account</legend>
@@ -15,7 +15,7 @@
         <div id="openid_btns"></div>
       </div>
       <div id="openid_input_area">
-        <input id="openid_identifier" name="OpenidIdentifier" type="text" value="http://" />
+        <input id="OpenidIdentifier" name="OpenidIdentifier" type="text" value="http://" />
         <input id="openid_submit" type="submit" value="Sign-In"/>
       </div>
     </fieldset>

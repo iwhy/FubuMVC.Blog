@@ -4,18 +4,13 @@ namespace Blog.Authorization.Login
 {
     public class PostHandler
     {
-        public PostHandler()
-        {
-        }
-
-        public dynamic Execute(AuthenticateInputModel inputModel)
+        public void Execute(AuthenticateInputModel inputModel)
         {
             var party = new OpenIdRelyingParty();
-            var response = party.GetResponse();
 
-            //TODO: party.CreateRequest(inputModel.GetIdentifier());
+            var request = party.CreateRequest(inputModel.GetIdentifier());
 
-            return null;
+            request.RedirectToProvider();
         }
     }
 }
