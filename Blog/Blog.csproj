@@ -42,6 +42,9 @@
     <Reference Include="dotless.Core">
       <HintPath>..\packages\FubuMVC.AssetTransforms\dotless.Core.dll</HintPath>
     </Reference>
+    <Reference Include="DotNetOpenAuth">
+      <HintPath>..\packages\DotNetOpenAuth\DotNetOpenAuth.dll</HintPath>
+    </Reference>
     <Reference Include="FubuCore">
       <HintPath>..\packages\FubuCore\FubuCore.dll</HintPath>
     </Reference>

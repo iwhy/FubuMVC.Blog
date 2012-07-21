@@ -1,4 +1,7 @@
 ﻿<viewdata model="Blog.Authorization.Authentication.AuthenticationViewModel"/>
 <header>
-    <h2>Login</h2>
+    <h2>509</h2>
 </header>
+<p>
+  Woops, you are not allowed to be here.
+</p>

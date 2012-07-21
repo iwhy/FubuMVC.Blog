@@ -1,4 +1,7 @@
 ﻿<viewdata model="Blog.Articles.ArticleViewModel"/>
+
+# this.Asset("article");
+
 <article>
     <header>
       <h2>
@@ -16,7 +19,3 @@
 </article>
 <section data-module="/comments/${Model.Id}">
 </section>
-
-<content:scripts>
-  # this.Asset("article");
-</content:scripts>

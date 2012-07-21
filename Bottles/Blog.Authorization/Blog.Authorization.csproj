@@ -34,6 +34,9 @@
     <Reference Include="Bottles">
       <HintPath>..\..\packages\Bottles\Bottles.dll</HintPath>
     </Reference>
+    <Reference Include="DotNetOpenAuth">
+      <HintPath>..\..\packages\DotNetOpenAuth\DotNetOpenAuth.dll</HintPath>
+    </Reference>
     <Reference Include="FubuCore">
       <HintPath>..\..\packages\FubuCore\FubuCore.dll</HintPath>
     </Reference>
@@ -54,11 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthorizationRegistry.cs" />
-    <Compile Include="Handlers\Authentication\AuthenticateInputModel.cs" />
-    <Compile Include="Handlers\Authentication\AuthenticationInputModel.cs" />
-    <Compile Include="Handlers\Authentication\AuthenticationViewModel.cs" />
-    <Compile Include="Handlers\Authentication\GetHandler.cs" />
-    <Compile Include="Handlers\Authentication\PostHandler.cs" />
+    <Compile Include="Conventions\AuthorizationConvention.cs" />
+    <Compile Include="Handlers\Login\AuthenticateInputModel.cs" />
+    <Compile Include="Handlers\Login\LoginInputModel.cs" />
+    <Compile Include="Handlers\Login\LoginViewModel.cs" />
+    <Compile Include="Handlers\Login\GetHandler.cs" />
+    <Compile Include="Handlers\Login\PostHandler.cs" />
+    <Compile Include="Handlers\AuthorizationFailure\AuthorizationFailureHandler.cs" />
+    <Compile Include="Handlers\AuthorizationFailure\AuthorizationFailureInputModel.cs" />
+    <Compile Include="Handlers\AuthorizationFailure\AuthorizationFailureViewModel.cs" />
+    <Compile Include="Handlers\AuthorizationFailure\GetHandler.cs" />
+    <Compile Include="Policies\AuthorizationPolicy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -69,10 +78,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".package-manifest" />
-    <None Include="Handlers\Authentication\login.spark" />
+    <None Include="authorization.script.config" />
+    <None Include="authorization.asset.config" />
+    <None Include="Handlers\Login\login.spark" />
+    <None Include="Handlers\AuthorizationFailure\authorizationfailure.spark" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Handlers\Logout\" />
     <Folder Include="Handlers\Registration\" />
+    <Folder Include="Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\images\openid-inputicon.gif" />
+    <Content Include="Content\images\openid-providers-en.png" />
+    <Content Include="Content\scripts\login.js" />
+    <Content Include="Content\scripts\util\openid-en.js" />
+    <Content Include="Content\scripts\util\openid-jquery.js" />
+    <None Include="Content\styles\openid.less" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

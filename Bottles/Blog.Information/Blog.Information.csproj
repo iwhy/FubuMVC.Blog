@@ -69,7 +69,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include=".package-manifest" />
+    <None Include=".package-manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Handlers\about.spark" />
     <None Include="Handlers\Authors\authors.spark" />
   </ItemGroup>
