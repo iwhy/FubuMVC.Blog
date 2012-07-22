@@ -1,8 +1,7 @@
 using Blog.Authorization.Conventions;
-using Blog.Authorization.Login;
-using Blog.Core.Constants;
+using Blog.Authorization.AuthorizationFailure;
 using FubuMVC.Core;
-using FubuMVC.Core.UI.Navigation;
+using FubuMVC.Core.Security;
 
 namespace Blog.Authorization
 {
@@ -10,17 +9,13 @@ namespace Blog.Authorization
     {
         public void Configure(FubuRegistry registry)
         {
-            registry.Policies.Add<AuthorizationConvention>();
+            registry.ApplyConvention<AuthorizationConvention>();
 
-
-            registry.Navigation(x =>
-            {
-                x.ForMenu(StringConstants.BlogName);
-                x.InsertAfter["About"] = MenuNode.ForInput<LoginInputModel>("Login");
-            });
+            registry.Navigation<AuthorizationNavigationRegistry>();
 
             registry.Services(x =>
             {
+                x.ReplaceService<IAuthorizationFailureHandler,AuthorizationFailureHandler>();
             });
         }
     }

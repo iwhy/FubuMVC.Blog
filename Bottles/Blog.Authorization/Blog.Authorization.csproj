@@ -56,17 +56,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthorizationNavigationRegistry.cs" />
     <Compile Include="AuthorizationRegistry.cs" />
     <Compile Include="Conventions\AuthorizationConvention.cs" />
+    <Compile Include="Handlers\AuthorizationFailure\AuthorizationFailureHandler.cs" />
+    <Compile Include="Handlers\AuthorizationFailure\AuthorizationFailureInputModel.cs" />
+    <Compile Include="Handlers\AuthorizationFailure\AuthorizationFailureViewModel.cs" />
+    <Compile Include="Handlers\AuthorizationFailure\GetHandler.cs" />
     <Compile Include="Handlers\Login\AuthenticateInputModel.cs" />
     <Compile Include="Handlers\Login\LoginInputModel.cs" />
     <Compile Include="Handlers\Login\LoginViewModel.cs" />
     <Compile Include="Handlers\Login\GetHandler.cs" />
     <Compile Include="Handlers\Login\PostHandler.cs" />
-    <Compile Include="Handlers\AuthorizationFailure\AuthorizationFailureHandler.cs" />
-    <Compile Include="Handlers\AuthorizationFailure\AuthorizationFailureInputModel.cs" />
-    <Compile Include="Handlers\AuthorizationFailure\AuthorizationFailureViewModel.cs" />
-    <Compile Include="Handlers\AuthorizationFailure\GetHandler.cs" />
+    <Compile Include="Handlers\Logout\GetHandler.cs" />
+    <Compile Include="Handlers\Logout\LogoutInputModel.cs" />
+    <Compile Include="Handlers\Logout\LogoutViewModel.cs" />
     <Compile Include="Policies\AuthorizationPolicy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -80,12 +84,11 @@
     <None Include=".package-manifest" />
     <None Include="authorization.script.config" />
     <None Include="authorization.asset.config" />
-    <None Include="Handlers\Login\login.spark" />
     <None Include="Handlers\AuthorizationFailure\authorizationfailure.spark" />
+    <None Include="Handlers\Login\login.spark" />
+    <None Include="Handlers\Logout\logout.spark" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Handlers\Logout\" />
-    <Folder Include="Handlers\Registration\" />
     <Folder Include="Shared\" />
   </ItemGroup>
   <ItemGroup>

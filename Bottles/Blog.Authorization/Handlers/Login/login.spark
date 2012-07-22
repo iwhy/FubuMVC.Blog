@@ -2,10 +2,10 @@
 
 # this.Asset("login");
 
-<header>
+<header if="!Model.LoginSuccessful">
   <h2>Login</h2>
 </header>
-<div>
+<div if="!Model.LoginSuccessful">
   <form action="/authorization/login" method="POST" id="openid_form">
     <input type="hidden" name="action" value="verify" />
     <fieldset>
@@ -21,3 +21,4 @@
     </fieldset>
   </form>
 </div>
+<input type="hidden" if="Model.LoginSuccessful" id="authorization"/>

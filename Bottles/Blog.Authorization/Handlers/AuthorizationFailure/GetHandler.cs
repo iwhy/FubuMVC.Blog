@@ -1,4 +1,4 @@
-﻿namespace Blog.Authorization.Handlers.AuthorizationFailure
+﻿namespace Blog.Authorization.AuthorizationFailure
 {
     public class GetHandler
     {
